@@ -156,7 +156,7 @@ List<User> users = [];
 
 
 class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({Key? key}) : super(key: key);
+  const SignUpScreen({super.key});
 
   @override
   SignUpScreenState createState() => SignUpScreenState();
@@ -342,7 +342,7 @@ class SignUpScreenState extends State<SignUpScreen> {
 }
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   LoginScreenState createState() => LoginScreenState();
@@ -458,7 +458,7 @@ class LoginScreenState extends State<LoginScreen> {
 }
 
 class MainScreen extends StatelessWidget {
-  const MainScreen({Key? key}) : super(key: key);
+  const MainScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -506,7 +506,7 @@ class MainScreen extends StatelessWidget {
             MainScreenButton(
               icon: Icons.create,
               label: 'Create User',
-              gradientColors: [Colors.pinkAccent, Colors.pink],
+              gradientColors: const [Colors.pinkAccent, Colors.pink],
               onPressed: () {
                 Navigator.push(
                   context,
@@ -530,7 +530,7 @@ class MainScreen extends StatelessWidget {
             MainScreenButton(
               icon: Icons.add,
               label: 'Add Product',
-              gradientColors: [Colors.blueGrey, Colors.grey],
+              gradientColors: const [Colors.blueGrey, Colors.grey],
               onPressed: () {
                 Navigator.push(
                   context,
@@ -543,7 +543,7 @@ class MainScreen extends StatelessWidget {
             MainScreenButton(
               icon: Icons.verified_rounded,
               label: 'Check Product',
-              gradientColors: [Colors.purple, Colors.deepPurple],
+              gradientColors: const [Colors.purple, Colors.deepPurple],
               onPressed: () {
                 Navigator.push(
                   context,
@@ -556,7 +556,7 @@ class MainScreen extends StatelessWidget {
             MainScreenButton(
               icon: Icons.file_upload_outlined,
               label: 'Retrieve Product',
-              gradientColors: [Colors.lightGreen, Colors.green],
+              gradientColors: const [Colors.lightGreen, Colors.green],
               onPressed: () {
                 Navigator.push(
                   context,
@@ -569,7 +569,7 @@ class MainScreen extends StatelessWidget {
             MainScreenButton(
               icon: Icons.support_agent,
               label: 'Online Assistance',
-              gradientColors: [Colors.lightBlueAccent, Colors.blueAccent],
+              gradientColors: const [Colors.lightBlueAccent, Colors.blueAccent],
               onPressed: () {
                 Navigator.push(
                   context,
@@ -591,7 +591,7 @@ class MainScreenButton extends StatelessWidget {
   final String label;
   final List<Color> gradientColors;
 
-  const MainScreenButton({
+  const MainScreenButton({super.key,
     required this.onPressed,
     required this.icon,
     required this.label,
@@ -647,7 +647,7 @@ class MainScreenButton extends StatelessWidget {
 class MessageScreen extends StatelessWidget {
   final String message;
 
-  const MessageScreen({Key? key, required this.message}) : super(key: key);
+  const MessageScreen({super.key, required this.message});
 
   @override
   Widget build(BuildContext context) {
@@ -668,7 +668,7 @@ class MessageScreen extends StatelessWidget {
 }
 
 class CreateUser extends StatefulWidget {
-  const CreateUser({Key? key}) : super(key: key);
+  const CreateUser({super.key});
 
   @override
   CreateUserState createState() => CreateUserState();
@@ -765,7 +765,7 @@ class CreateUserState extends State<CreateUser> {
       keyboardType: keyboardType,
       decoration: InputDecoration(
         labelText: label,
-        border: OutlineInputBorder(),
+        border: const OutlineInputBorder(),
       ),
     );
   }
@@ -774,7 +774,7 @@ class CreateUserState extends State<CreateUser> {
 class ProfileScreen extends StatelessWidget {
   final User user;
 
-  const ProfileScreen({Key? key, required this.user}) : super(key: key);
+  const ProfileScreen({super.key, required this.user});
 
   @override
   Widget build(BuildContext context) {
